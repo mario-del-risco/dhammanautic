@@ -1,7 +1,9 @@
 # Django project specific excludes
 *.sqlite3  # Database file
 .env  # Environment variables
-__pycache__  # Python cache files
+*__pycache__  # Python cache files
+__pycache__/*
+
 *.log  # Log files
 
 # General excludes
