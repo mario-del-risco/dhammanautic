@@ -9,3 +9,6 @@ __pycache__  # Python cache files
 
 # Specific IDE files
 .idea/  # PyCharm IDE files
+
+#Splitting Setting Things
+settings*.py
