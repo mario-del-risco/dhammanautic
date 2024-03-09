@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="resource_title">
+    <div class="resource_info">
+        <h2>{{ resource.title }}</h2>
+        <a href="{{ resource.url }}">{{ resource.url }}</p>
+            <p class="article-body">{{ resource.main_goal }}</p>
+    </div>
+    <img src="{{ resource.thumb.url }}"/>
+</div>
+
+
+{% endblock %}

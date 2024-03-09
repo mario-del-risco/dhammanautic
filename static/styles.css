@@ -127,6 +127,35 @@ nav button{
   font-size: 1.1em;
 }
 
+.resource_title {
+    display: grid;
+    grid-template-columns: 70% 1fr;  /* 40% for thumbnail, 1fr for remaining space */
+    grid-gap: 10px;  /* Optional spacing between thumbnail and info */
+    padding: 10px;
+    margin: 30px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    position: relative;
+    padding-bottom: 40px;
+}
+  
+  .resource_title img {
+    width: 100%;  /* Thumbnail resizes proportionally within its column */
+    height: auto;  /* Maintains aspect ratio */
+    object-fit: cover;  /* Clips image if necessary to fit within column */
+  }
+  
+  /* Media query to hide image on small screens */
+  @media (max-width: 768px) {
+    .resource_title {
+      grid-template-columns: 1fr;  /* Remove thumbnail on small screens */
+    }
+    .resource_title img {
+        width: 0%;
+    }
+  }
+
+
 .site-form {
     margin-top: 60px;
     border: 1px solid #00dba0;
