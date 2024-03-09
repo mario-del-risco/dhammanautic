@@ -1,0 +1,19 @@
+# Database file
+*.sqlite3
+
+# Environment variables (consider using a separate .env file)
+.env
+
+# Python cache files
+__pycache__/*
+
+# Log files
+*.log
+
+# General excludes
+*.pyc  # Python bytecode files
+
+# Specific IDE files (adjust as needed)
+.idea/  # PyCharm IDE files
+
+settings*.py
