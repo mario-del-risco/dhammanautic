@@ -13,5 +13,5 @@ __pycache__/*
 .idea/  # PyCharm IDE files
 
 # Splitting Setting Things
-settings_production.py
+dhammanotes/settings_production.py
 
