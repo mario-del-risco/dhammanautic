@@ -1,0 +1,9 @@
+{% if random_quote is None %}
+<p>No quotes Found</p>
+{% else %}
+  <div class="random-quote">
+    {% for line in random_quote %}
+    {{line}}<br>
+    {% endfor %}
+  </div>
+{% endif %}

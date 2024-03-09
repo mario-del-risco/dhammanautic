@@ -1,0 +1,42 @@
+{% load static from static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Articles</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')
+    </style>
+  </head>
+  <body>
+    <header class="wrapper">
+      <h1><a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" id="logo"/></a> </h1>
+
+      <nav>
+        <ul>
+        {% if user.is_authenticated %}
+
+          <li>
+            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+              {% csrf_token %}
+              <button type="submit">Logout</button>
+            </form>
+          </li>
+          <li><a href="{% url 'articles:create' %}" class="highlight">New Article</a> </li>
+        {% else %}
+          <li><a href="{% url 'accounts:login' %}">Login</a></li>
+          <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
+        </ul>
+        {% endif %}
+</ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      {% block content %}
+      
+      {% endblock %}
+    </div>
+  </body>
+</html>
