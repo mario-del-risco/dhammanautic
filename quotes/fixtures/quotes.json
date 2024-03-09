@@ -1,0 +1,19 @@
+[
+    {
+      "model": "quotes.quotes",  
+      "pk": 1,
+      "fields": {
+        "quote_text": "The Hitchhiksdsdsdsder's Guide to the Galaxy",
+        "author": "Douglas Adams"
+      }
+    },
+    {
+      "model": "quotes.quotes",
+      "pk": 2,
+      "fields": {
+        "quote_text": "Pride and Prejudice",
+        "author": "Jane Austen"
+      }
+    }
+  ]
+  

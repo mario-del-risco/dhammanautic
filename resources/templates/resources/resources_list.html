@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<h1>Online Treasures</h1>
+<div class="resources">
+    {% for resource in all_resources %}
+        <div class="resource">
+            <h2><a href="{% url 'resources:detail' slug=resource.slug %}">{{resource.title}}</a></h2>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -12,28 +12,19 @@
   </head>
   <body>
     <header class="wrapper">
-      <h1><a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" id="logo"/></a> </h1>
+    <h1><a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" id="logo"/></a> </h1>
 
-      <nav>
-        <ul>
-        {% if user.is_authenticated %}
-
-          <li>
-            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
-              {% csrf_token %}
-              <button type="submit">Logout</button>
-            </form>
-          </li>
-          <li><a href="{% url 'articles:create' %}" class="highlight">New Article</a> </li>
-        {% else %}
-          <li><a href="{% url 'accounts:login' %}">Login</a></li>
-          <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
-        </ul>
-        {% endif %}
+    <nav>
+      <ul>
+        <li>
+            <a href="{% url 'resources:resources_list' %}">Resources</a>
+        </li>
+        <li><a href="{% url 'articles:list' %}">Articles</a> </li>
 </ul>
-      </nav>
-    </header>
-    <div class="wrapper">
+    </nav>
+  </header>
+<div class="wrapper">
+    
       {% block content %}
       
       {% endblock %}
