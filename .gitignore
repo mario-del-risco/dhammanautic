@@ -11,4 +11,5 @@ __pycache__  # Python cache files
 .idea/  # PyCharm IDE files
 
 # Splitting Setting Things
-settings*.py
+settings_production.py
+
